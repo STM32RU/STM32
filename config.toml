@@ -16,3 +16,8 @@ disablePathToLower = true
   [markup.tableOfContents]
     startLevel = 1
     endLevel = 9
+
+[params]
+  geekdocLogo = "logo.svg"
+  geekdocRepo = "https://github.com/i7d3v3l0p3r/STM32"
+  geekdocEditPath = "edit/master/content"
