@@ -14,4 +14,4 @@ geekdocFlatSection: true
 - [Список литературы на английском от ST](https://www.st.com/content/st_com/en/support/learning/stm32-education/text-books.html)
 - [Youtube - канал компании ST](https://www.youtube.com/user/STonlineMedia/playlists)
 - [STM32F4_FreeRTOS](https://t.me/stm32std/1717)
-- [ARM-ASM-Tutorial (https://www.mikrocontroller.net/articles/ARM-ASM-Tutorial)](https://www.mikrocontroller.net/articles/ARM-ASM-Tutorial)
+- [ARM-ASM-Tutorial](https://www.mikrocontroller.net/articles/ARM-ASM-Tutorial)

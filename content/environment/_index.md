@@ -20,3 +20,28 @@ geekdocCollapseSection: true
 - [IAR](https://www.iar.com/iar-embedded-workbench/) (Win). Простая (в плане количества надстроек) и мощная среда, с собственным компилятором, но при этом не самым удобным редактором кода. Очень быстрая сборка и отладка.
 
 - [CLion](/environment/setup-clion-for-stm32/) (Win, Linux, Mac) бесплатный пробный период на 30 дней.
+
+## Утилиты
+
+- [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html) (Win, Linux, Mac)
+- [ST-LINK utility](https://www.st.com/en/development-tools/stsw-link004.html) (Win)
+
+## Help для IDE
+
+### CubeIDE
+
+{{< expand "Добавление своей папки в проект" >}}
+Источник: [@stm32std](https://t.me/stm32std/14889)
+
+![1](environment/1.jpg)
+{{< /expand >}}
+
+
+### AtollicTrueStudio
+
+- [Установка TrueStudio и STM32CubeMX](https://istarik.ru/blog/stm32/106.html)
+- [Atollic_TrueSTUDIO_for_STM32_User_Guide](/environment/Atollic_TrueSTUDIO_for_STM32_User_Guide.pdf)
+- [Atollic_Serial_wire_viewer_realtime_tracing](/environment/Atollic_Serial_wire_viewer_realtime_tracing.pdf)
+- [Загрузка без Debug](https://www.youtube.com/watch?v=VBzLFedDxAA)
+- [Добавление ссылки на файл](https://www.youtube.com/watch?v=0SzzZe7-ccs)
+- [Проект на CMSIS в TrueStudio](http://easyelectronics.ru/cozdanie-minimalnogo-proekta-pod-stm32-v-atollic-true-studio.html)
