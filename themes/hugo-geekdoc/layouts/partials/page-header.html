@@ -10,7 +10,7 @@
     {{ $parent := .page.Parent }}
     {{ if $parent }}
         {{ $name := (partial "title" $parent) }}
-        {{ $value := (printf "<a href='%s'>%s</a> / %s" $parent.RelPermalink $name .value) }}
+        {{ $value := (printf "<a itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' href='%s'>%s</a> / %s" $parent.RelPermalink $name .value) }}
         {{ template "breadcrumb" dict "page" $parent "value" $value }}
     {{ else }}
         {{ .value | safeHTML }}
@@ -19,7 +19,7 @@
 
 {{ $showBreadcrumb := (and (default true .Page.Params.GeekdocBreadcrumb) (default true .Site.Params.GeekdocBreadcrumb)) }}
 {{ $showEdit := (and ($.Scratch.Get "geekdocFilePath") $geekdocRepo $geekdocEditPath) }}
-<div class="gdoc-page__header flex flex-wrap justify-between{{ if not $showEdit }} hidden-mobile{{ end }}{{ if (and (not $showBreadcrumb) (not $showEdit)) }} hidden {{ end }}" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+<div class="gdoc-page__header flex flex-wrap justify-between{{ if not $showEdit }} hidden-mobile{{ end }}{{ if (and (not $showBreadcrumb) (not $showEdit)) }} hidden {{ end }}" itemscope itemtype="schema.org/BreadcrumbList">
     <span>
         {{if $showBreadcrumb }}
         <span class="breadcrumb">
