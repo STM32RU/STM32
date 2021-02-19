@@ -25,6 +25,7 @@ geekdocCollapseSection: true
 
 - [STM32CubeProg](https://www.st.com/en/development-tools/stm32cubeprog.html) (Win, Linux, Mac)
 - [ST-LINK utility](https://www.st.com/en/development-tools/stsw-link004.html) (Win)
+- ST MCU Finder - приложение для подбора микроконтроллера производства ST по параметрам. [PC](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/st-mcu-finder-pc.html), [Android](https://play.google.com/store/apps/details?id=fr.appsolute.st), [iOS](https://apps.apple.com/us/app/st-mcu-finder/id864903472).
 
 ## Help для IDE
 
