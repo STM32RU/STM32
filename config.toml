@@ -1,4 +1,4 @@
-baseURL = "https://stm32club.ru"
+baseURL = "https://stm32club.ru/"
 languageCode = "ru-RU"
 title = "STM32"
 theme = "hugo-geekdoc"
