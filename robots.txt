@@ -2,3 +2,9 @@ User-agent: *
 Disallow: /categories/*
 Disallow: /tags/*
 Sitemap: https://stm32club.ru/sitemap.xml
+
+User-agent: Yandex
+Disallow: /categories/*
+Disallow: /tags/*
+Host: www.stm32club.ru
+Sitemap: https://stm32club.ru/sitemap.xml
