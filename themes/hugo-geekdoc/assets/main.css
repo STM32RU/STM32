@@ -704,6 +704,14 @@ img {
   transition-property: transform,margin-left,opacity;
   will-change: transform,margin-left
 }
+.breadcrumb {
+  display: inline;
+  padding: 0;
+  margin: 0
+}
+.breadcrumb li {
+  display: inline
+}
 .gdoc-markdown {
   line-height: 1.6em
 }
@@ -743,21 +751,55 @@ img {
 .gdoc-markdown strong {
   font-weight: bolder
 }
-.gdoc-markdown a {
+.gdoc-markdown a,
+.gdoc-markdown__link {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   line-height: 1em
 }
-.gdoc-markdown a:hover {
+.gdoc-markdown a:hover,
+.gdoc-markdown__link:hover {
   text-decoration: underline
 }
+.gdoc-markdown__link--raw {
+  text-decoration: none!important;
+  color: #343a40!important
+}
+.gdoc-markdown__link--raw:hover {
+  text-decoration: none!important
+}
+.gdoc-markdown__link--raw:visited {
+  color: #343a40!important
+}
 .gdoc-markdown img {
-  max-width: 100%
+  max-width: 100%;
+  border-radius: .15rem
+}
+.gdoc-markdown__figure {
+  padding: .25rem;
+  margin: 1rem 0;
+  background-color: #dee2e6;
+  display: table;
+  border-top-left-radius: .15rem;
+  border-top-right-radius: .15rem
+}
+.gdoc-markdown__figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  background-color: #dee2e6;
+  padding: 0 .25rem .25rem;
+  text-align: center;
+  border-bottom-left-radius: .15rem;
+  border-bottom-right-radius: .15rem
+}
+.gdoc-markdown__figure img {
+  max-width: 100%;
+  height: auto
 }
 .gdoc-markdown blockquote {
   margin: 1rem 0;
   padding: .5rem 1rem .5rem .75rem;
-  border-left: .25rem solid #e9ecef;
+  border-left: 4px solid #e9ecef;
   border-radius: .15rem
 }
 .gdoc-markdown blockquote :first-child {
@@ -783,7 +825,7 @@ img {
   background: #f8f9fa
 }
 .gdoc-markdown hr {
-  height: 1px;
+  height: .125rem;
   border: none;
   background: #e9ecef
 }
@@ -807,7 +849,7 @@ img {
   line-height: 1.45;
   padding: .2em .4em
 }
-.gdoc-markdown > pre code {
+.gdoc-markdown pre code {
   display: block;
   padding: 1rem;
   width: 100%;

@@ -1,13 +1,1 @@
 /* You can add custom styles here. */
-
-.breadcrumb {
-    overflow-x: hidden;
-    white-space: nowrap;
-    display: inline;
-    padding-left: 10px;
-}
-
-.breadcrumb li {
-    display:inline;
-    padding: 0 5px;
-}
