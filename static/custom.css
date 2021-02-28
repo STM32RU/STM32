@@ -1,0 +1,28 @@
+.board-section .gdoc-page__anchorwrap h2 {
+    margin-bottom: 0.25rem;
+}
+
+.board-section__boards {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.board {
+    flex: 1;
+    flex-basis: 33.3%;
+    padding: 0.25rem;
+    color: #343a40;
+    max-width: 33.3%;
+}
+
+.board:visited {
+    color: #343a40;
+}
+
+.board__title {
+    margin: 0.25rem 0;
+}
+
+.board__description {
+    font-size: 0.75rem;
+}

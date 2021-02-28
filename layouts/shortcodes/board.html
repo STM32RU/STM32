@@ -1,0 +1,11 @@
+{{ $img := .Get "img" }}
+{{ $name := .Get "name" }}
+{{ $desc := .Get "desc" }}
+{{ $href := .Get "href" }}
+
+<a href="{{ $href | relURL }}" class="board">
+    <img loading="lazy" src='{{ $img | relURL }}' alt='{{ $name }}'/>
+    <h6 class="board__title">{{ $name }}</h6>
+    <hr>
+    <span class="board__description">{{ $desc }}</p>
+</a>
