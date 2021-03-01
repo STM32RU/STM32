@@ -20,6 +20,9 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Generate board files
+        run: ./build_boards.sh
+
       - name: Build
         run: hugo --minify
 

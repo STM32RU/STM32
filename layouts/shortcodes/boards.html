@@ -1,14 +1,15 @@
-{{ $sections := $.Site.Data.boards.list.sections}}
+{{ $sections := $.Site.Data.boards }}
 
-{{ range $sections }}
+{{ range $key, $value := $sections }}
     <div class="board-section">
-        {{ add "## " .title | $.Page.RenderString }}
+        {{ add "## " $key | $.Page.RenderString }}
         <hr>
         <div class="board-section__boards">
-            {{ range .boards }}
-                <a href="{{ .href | relURL }}" class="board">
-                    <img loading="lazy" src='{{ .img | relURL }}' alt='{{ .name }}'/>
-                    <h6 class="board__title">{{ .name }}</h6>
+            {{ range $boardName, $boardInfo := $value }}
+                {{ $path := printf "/boards/%s/%s.html" $key $boardName }}
+                <a href="{{ $path | relURL }}" class="board">
+                    <img loading="lazy" src='{{ $boardInfo.board.placeholder | relURL }}' alt='{{ $boardInfo.board.name }}'/>
+                    <h6 class="board__title">{{ $boardInfo.board.name }}</h6>
                     <hr>
                     <span class="board__description">{{ .desc }}</p>
                 </a>
