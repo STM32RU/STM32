@@ -1,0 +1,18 @@
+{{ $sections := $.Site.Data.boards.list.sections}}
+
+{{ range $sections }}
+    <div class="board-section">
+        {{ add "## " .title | $.Page.RenderString }}
+        <hr>
+        <div class="board-section__boards">
+            {{ range .boards }}
+                <a href="{{ .href | relURL }}" class="board">
+                    <img loading="lazy" src='{{ .img | relURL }}' alt='{{ .name }}'/>
+                    <h6 class="board__title">{{ .name }}</h6>
+                    <hr>
+                    <span class="board__description">{{ .desc }}</p>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

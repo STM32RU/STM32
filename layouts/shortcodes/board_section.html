@@ -1,9 +1,0 @@
-{{ $title := .Get "title" }}
-
-<div class="board-section">
-    {{ add "## " $title | $.Page.RenderString }}
-    <hr>
-    <div class="board-section__boards">
-        {{ .Inner | $.Page.RenderString }}
-    </div>
-</div>
