@@ -7,6 +7,7 @@ theme = "hugo-geekdoc"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
+uglyURLs = true
 
 # Needed for mermaid shortcodes
 [markup]
