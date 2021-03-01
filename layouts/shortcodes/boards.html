@@ -2,7 +2,7 @@
 
 {{ range $key, $value := $sections }}
     <div class="board-section">
-        {{ add "## " $key | $.Page.RenderString }}
+        {{ add "## " (upper $key) | $.Page.RenderString }}
         <hr>
         <div class="board-section__boards">
             {{ range $boardName, $boardInfo := $value }}
