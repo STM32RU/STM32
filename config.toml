@@ -24,6 +24,7 @@ uglyURLs = true
   geekdocLogo = "logo.svg"
   geekdocRepo = "https://github.com/i7d3v3l0p3r/STM32"
   geekdocEditPath = "edit/master/content"
+  description = "Здесь вы сможете найти полезные материалы, касающихся разработки устройств на базе STM32"
 
 [frontmatter]
   lastmod = [":git", ":fileModTime", "lastmod", "date", "publishDate"]
