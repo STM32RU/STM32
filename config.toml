@@ -3,6 +3,8 @@ languageCode = "ru-RU"
 title = "STM32"
 theme = "hugo-geekdoc"
 
+enableGitInfo = true
+
 # Geekdoc required configuration
 pygmentsUseClasses = true
 pygmentsCodeFences = true
