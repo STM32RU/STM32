@@ -1,6 +1,19 @@
+{{ $description := "" }}
+{{ if .IsPage }}
+  {{ if .Params.Description }}
+    {{ $description = .Params.Description }}
+  {{ else }}
+    {{ $description = .Summary }}
+  {{ end }}
+{{ else if .Params.Description }}
+  {{ $description = .Params.Description }}
+{{ else }}
+  {{ $description = .Site.Params.Description }}
+{{ end }}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ partial "title" . }}">
+<meta name="description" content="{{ $description }}">
 <meta name="google-site-verification" content="XaiD4js-5ELHyR3pVAC0ZKa3PlIspeIyrk5gsYJliVI" />
 <meta name="yandex-verification" content="a24ad91c8fb7a4a5" />
 
