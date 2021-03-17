@@ -22,3 +22,6 @@ uglyURLs = true
   geekdocLogo = "logo.svg"
   geekdocRepo = "https://github.com/i7d3v3l0p3r/STM32"
   geekdocEditPath = "edit/master/content"
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
