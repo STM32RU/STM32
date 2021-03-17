@@ -24,4 +24,4 @@ uglyURLs = true
   geekdocEditPath = "edit/master/content"
 
 [frontmatter]
-  lastmod = ["lastmod", ":fileModTime", ":default"]
+  lastmod = [":git", ":fileModTime", "lastmod", "date", "publishDate"]
