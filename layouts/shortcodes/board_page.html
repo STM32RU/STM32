@@ -1,0 +1,71 @@
+{{ $dir := index $.Page.Site.Data.boards $.Page.Params.board_dir }}
+{{ $data := index $dir $.Page.Params.board_file }}
+
+<p>{{ partial "mcus_list" $data.microcontroller.number }}</p>
+
+<div class="board-content">
+    <div class="board-content__column">
+        {{ if isset $data "board" }}
+            {{ "## Плата" | $.Page.RenderString }}
+            <table class="params-table">
+                <tbody>
+                    {{ if isset $data.board "name" }}
+                        <tr><td>Название</td><td>{{ $data.board.name }}</td></tr>
+                    {{ end }}
+
+                    {{ if isset $data.board "brand" }}
+                        <tr>
+                            <td>Производитель</td>
+                            <td>
+                                {{ if isset $data.board.brand "name" }}
+                                    <a href="{{ $data.board.brand.url }}">{{ $data.board.brand.name }}</a>
+                                {{ else }}
+                                    {{ $data.board.brand }}
+                                {{ end }}
+                            </td>
+                        </tr>
+                    {{ end }}
+
+                    {{ if isset $data.board "country" }}
+                        <tr><td>Страна</td><td>{{ $data.board.country }}</td></tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        {{ end }}
+
+        {{ if isset $data "microcontroller" }}
+            {{ "## Микроконтроллер" | $.Page.RenderString }}
+            <table class="params-table">
+                <tbody>
+                    {{ if isset $data.microcontroller "number" }}
+                        <tr><td>Номер</td><td>{{ partial "mcus_list_links" $data.microcontroller.number }}</td></tr>
+                    {{ end }}
+                    {{ if isset $data.microcontroller "manufacturer" }}
+                        <tr><td>Производитель</td><td><a href="{{ $data.microcontroller.manufacturer.url }}">{{ $data.microcontroller.manufacturer.name }}</a></td></tr>
+                    {{ end }}
+                    {{ if isset $data.microcontroller "core" }}
+                        <tr><td>Ядро</td><td><a href="{{ $data.microcontroller.core.url }}">{{ $data.microcontroller.core.name }}</a></td></tr>
+                    {{ end }}
+                    {{ if isset $data.microcontroller "clock_speed" }}
+                        <tr>
+                            <td>Частота</td>
+                            <td>
+                                {{ if isset $data.microcontroller.clock_speed 0 }}
+                                    {{ range $index, $value := $data.microcontroller.clock_speed }}
+                                        <div>{{ $value }}</div>
+                                    {{ end }}
+                                {{ end }}
+                            </td>
+                        </tr>
+                    {{ end }}
+                    {{ if isset $data.microcontroller "package" }}
+                        <tr><td>Корпус</td><td>{{ $data.microcontroller.package }}</td></tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        {{ end }}
+    </div>
+    <div class="board-content__column">
+        
+    </div>
+</div>

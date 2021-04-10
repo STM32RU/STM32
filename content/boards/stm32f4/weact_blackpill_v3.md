@@ -1,6 +1,8 @@
 ---
-title: WeAct Black Pill V3.0 (MiniF4 V3.0)
+title: 
 geekdocHidden: true
+board_dir: stm32f4
+board_file: weact_blackpill_v3
 ---
 
-{{< board_page data=$.Site.Data.boards.stm32f4.weact_blackpill_v3 >}}
+{{< board_page >}}

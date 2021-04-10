@@ -1,0 +1,13 @@
+{{ $numbers := . }}
+
+{{ if isset $numbers 0 }}
+    {{ $mcuNumber := "" }}
+    {{ range $index, $number := $numbers }}
+        {{ $num := cond (isset $number "name") $number.name $number }}
+        {{ $num = cond (ne $index 0) (add ", " $num) $num }}
+        {{ $mcuNumber = add $mcuNumber $num }}
+    {{ end }}
+    {{ $mcuNumber }}
+{{ else }}
+    {{ $numbers }}
+{{ end }}

@@ -6,23 +6,13 @@
         <hr>
         <div class="board-section__boards">
             {{ range $boardName, $boardInfo := $value }}
-                {{ $path := printf "/boards/%s/%s/" $key $boardName }}
+                {{ $path := printf "/boards/%s/%s.html" $key $boardName }}
                 <a href="{{ $path | relURL }}" class="board">
                     <img loading="lazy" src='{{ $boardInfo.board.placeholder | relURL }}' alt='{{ $boardInfo.board.name }}'/>
                     <h6 class="board__title">{{ $boardInfo.board.name }}</h6>
                     <hr>
                     <span class="board__description">
-                        {{ if isset $boardInfo.microcontroller.number 0 }}
-                            {{ $mcuNumber := "" }}
-                            {{ range $index, $number := $boardInfo.microcontroller.number }}
-                                {{ $num := cond (isset $number "name") $number.name $number }}
-                                {{ $num = cond (ne $index 0) (add ", " $num) $num }}
-                                {{ $mcuNumber = add $mcuNumber $num }}
-                            {{ end }}
-                            {{ $mcuNumber }}
-                        {{ else }}
-                            {{ $boardInfo.microcontroller.number }}
-                        {{ end }}
+                        {{ partial "mcus_list" $boardInfo.microcontroller.number }}
                     </span>
                 </a>
             {{ end }}

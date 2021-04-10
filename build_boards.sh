@@ -18,8 +18,10 @@ for f in $(ls ./data/boards/**/*.yaml); do
         name=$(grep -oP -m 1 "name:\s+(.*)$" "$f" | sed "s/^name:\\s*\(.*\)$/\1/");
         echo "title: $name" >> "$path";
         echo "geekdocHidden: true" >> "$path";
+        echo "board_dir: $dir" >> "$path";
+        echo "board_file: $file" >> "$path";
         echo "---" >> "$path";
         echo "" >> "$path";
-        echo "{{< board_page data=$.Site.Data.boards.$dir.$file >}}" >> "$path";
+        echo "{{< board_page >}}" >> "$path";
     fi
 done
